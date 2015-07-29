@@ -46,6 +46,22 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Elementals\Scripts\ManipulateChildren.cs" />
+     <Compile Include="Assets\Elementals\Scripts\OrbitCamera.cs" />
+     <Compile Include="Assets\Elementals\Scripts\TestParticles.cs" />
+     <Compile Include="Assets\Myo Samples\Scripts\ColorBoxByPose.cs" />
+     <Compile Include="Assets\Myo Samples\Scripts\JointOrientation.cs" />
+     <Compile Include="Assets\Myo Samples\Scripts\SampleSceneGUI.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\EventTypes.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\Hub.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\Myo.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\Pose.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\Properties\AssemblyInfo.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\Quaternion.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\Vector3.cs" />
+     <Compile Include="Assets\Myo\Scripts\Myo.NET\libmyo.cs" />
+     <Compile Include="Assets\Myo\Scripts\ThalmicHub.cs" />
+     <Compile Include="Assets\Myo\Scripts\ThalmicMyo.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\BackgroundPlaneBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CloudRecoBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CylinderTargetBehaviour.cs" />
@@ -92,6 +108,8 @@
      <None Include="Assets\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
      <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
+     <None Include="Assets\Elementals\!Readme.txt" />
+     <None Include="Assets\Myo\README-MyoUnity.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\BrightTexture.shader" />
      <None Include="Assets\readme_SDK.txt" />
      <None Include="Assets\Qualcomm Augmented Reality\Shaders\Text3D.shader" />
