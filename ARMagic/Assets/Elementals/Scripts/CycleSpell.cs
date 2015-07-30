@@ -3,11 +3,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public class ManipulateChildren : MonoBehaviour {
+using LockingPolicy = Thalmic.Myo.LockingPolicy;
+using Pose = Thalmic.Myo.Pose;
+using UnlockType = Thalmic.Myo.UnlockType;
+using VibrationType = Thalmic.Myo.VibrationType;
+
+public class CycleSpell : MonoBehaviour {
 
 	public List<GameObject> children; 
 	public int spellNum;
 	public GameObject currentSpell;
+	public GameObject myo = null;
+
+	private Pose _lastPose = Pose.Unknown;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +41,20 @@ public class ManipulateChildren : MonoBehaviour {
 	}
 
 	void checkInput(){
+		ThalmicMyo thalmicMyo = myo.GetComponent<ThalmicMyo>();
+		 
+		if (thalmicMyo.pose != _lastPose) {
+			_lastPose = thalmicMyo.pose;  
+
+			if (thalmicMyo.pose == Pose.FingersSpread) {
+				thalmicMyo.Vibrate (VibrationType.Medium);
+				changeSpell ();
+				ExtendUnlockAndNotifyUserAction (thalmicMyo);
+				
+				// Change material when wave in, wave out or double tap poses are made.
+			}
+		}
+
 		if (Input.GetKeyDown ("w")) {
 			changeSpell();
 		}
@@ -55,6 +77,17 @@ public class ManipulateChildren : MonoBehaviour {
 			currentSpell.SetActive (true);
 		}
 		Debug.Log("nextSpell: "+currentSpell);
+	}
+
+	void ExtendUnlockAndNotifyUserAction (ThalmicMyo myo)
+	{
+		ThalmicHub hub = ThalmicHub.instance;
+		
+		if (hub.lockingPolicy == LockingPolicy.Standard) {
+			myo.Unlock (UnlockType.Timed);
+		}
+		
+		myo.NotifyUserAction ();
 	}
 	
 }

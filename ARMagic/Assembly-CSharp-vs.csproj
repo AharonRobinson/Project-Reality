@@ -46,12 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Elementals\Scripts\ManipulateChildren.cs" />
+     <Compile Include="Assets\Elementals\Scripts\CycleSpell.cs" />
      <Compile Include="Assets\Elementals\Scripts\OrbitCamera.cs" />
      <Compile Include="Assets\Elementals\Scripts\TestParticles.cs" />
      <Compile Include="Assets\Myo Samples\Scripts\ColorBoxByPose.cs" />
      <Compile Include="Assets\Myo Samples\Scripts\JointOrientation.cs" />
      <Compile Include="Assets\Myo Samples\Scripts\SampleSceneGUI.cs" />
+     <Compile Include="Assets\Myo\Scripts\MessageManager.cs" />
      <Compile Include="Assets\Myo\Scripts\Myo.NET\EventTypes.cs" />
      <Compile Include="Assets\Myo\Scripts\Myo.NET\Hub.cs" />
      <Compile Include="Assets\Myo\Scripts\Myo.NET\Myo.cs" />
